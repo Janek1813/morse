@@ -1,0 +1,31 @@
+:root {
+  --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8;
+  --accent: #f59e0b; --error: #f87171; --border: #334155;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 1rem;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1e293b, var(--bg)); color: var(--text);
+}
+.card {
+  width: 100%; max-width: 640px; background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 1.75rem; box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+h1 { margin: 0; font-size: 1.8rem; }
+h1 span { color: var(--accent); }
+header p { color: var(--muted); margin: .25rem 0 1.25rem; }
+.toggle { display: grid; grid-template-columns: 1fr 1fr; background: var(--bg); border-radius: 10px; padding: 4px; margin-bottom: 1.25rem; }
+.toggle button { border: 0; background: transparent; color: var(--muted); padding: .65rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: .2s; }
+.toggle button.active { background: var(--accent); color: #1e293b; }
+label { display: block; font-size: .85rem; font-weight: 600; color: var(--muted); margin: .75rem 0 .35rem; text-transform: uppercase; letter-spacing: .05em; }
+textarea {
+  width: 100%; resize: vertical; padding: .85rem; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--text); font: 1.05rem/1.5 ui-monospace, Consolas, monospace;
+}
+textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+.errors { min-height: 1.2rem; margin-top: .5rem; color: var(--error); font-size: .88rem; }
+.actions { display: flex; gap: .6rem; margin-top: 1rem; flex-wrap: wrap; }
+.secondary { flex: 1; padding: .65rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text); font-weight: 600; cursor: pointer; transition: .2s; }
+.secondary:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 480px) { .card { padding: 1.25rem; } }

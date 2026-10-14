@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traductor Morse</title>
+</head>
+<body>
+
+  <!-- Contenedor principal de la aplicación -->
+  <main class="card">
+
+    <!-- Título de la página -->
+    <header>
+      <h1>Traductor <span>Morse</span></h1>
+      <p>Convierte texto a código Morse y viceversa.</p>
+    </header>
+
+    <!-- Botones para elegir el tipo de conversión -->
+    <div class="toggle">
+      <button type="button" id="btn-text" class="active">Texto → Morse</button>
+      <button type="button" id="btn-morse">Morse → Texto</button>
+    </div>
+
+    <!-- Entrada: aquí el usuario escribe -->
+    <label for="input" id="input-label">Texto</label>
+    <textarea id="input" rows="5" placeholder="Escribe tu texto aquí..."></textarea>
+
+    <!-- Aquí se muestran los mensajes de error (validaciones) -->
+    <div id="errors" class="errors"></div>
+
+    <!-- Salida: aquí aparece el resultado (solo lectura) -->
+    <label for="output" id="output-label">Código Morse</label>
+    <textarea id="output" rows="5" readonly placeholder="El resultado aparecerá aquí..."></textarea>
+
+    <!-- Botones de acciones extra -->
+    <div class="actions">
+      <button type="button" id="swap" class="secondary">Intercambiar</button>
+      <button type="button" id="clear" class="secondary">Limpiar</button>
+    </div>
+
+  </main>
+
+</body>
+</html>
